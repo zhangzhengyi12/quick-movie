@@ -1,0 +1,40 @@
+.header-tab {
+  display: flex;
+  box-shadow: 0 0 3px 3px #ccc;
+}
+
+.header-tab .item {
+  flex: 1;
+  list-style: none;
+  font-size: 14px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #202b34;
+  color: #878d91;
+  cursor: pointer;
+  position: relative;
+  transition: all .3s;
+}
+
+.header-tab .item.active {
+  background-color: #2e4350;
+  color: #00bbd7;
+}
+
+.header-tab .item.active::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 3px;
+  background: #00bbd7;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.header-tab .item:hover {
+  background-color: #48606e;
+  color: #00bbd7;
+}
