@@ -1,0 +1,52 @@
+.moview-preview  .cover {
+  width: 100%;
+  padding-top: 140%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,.5);
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.moview-preview {
+  width: 100%;
+  position: relative;
+}
+
+.cover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(0,0,0,1);
+}
+
+.moview-preview .name {
+  font-size: 14px;
+  color: #fff;
+  margin: 10px 0 0 0;
+  text-align: left;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.moview-preview .type {
+  font-size: 10px;
+  color: #92989c;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.rating {
+  background: #d67c05;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  color: #fff;
+  line-height: 32px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 110px;
+  right: -8px;
+  box-shadow: 1px 1px 12px #000
+}

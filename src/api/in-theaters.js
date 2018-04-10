@@ -4,3 +4,7 @@ function getDoubanInTheatersData(){
   const target = "movie/in_theaters"
   return request(target)
 }
+
+export {
+  getDoubanInTheatersData
+}

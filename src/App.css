@@ -1,9 +1,16 @@
 .App {
   text-align: center;
   height: 560px;
-  width: 400px;
+  width: 420px;
 }
 
+.App .dis {
+  display: block;
+}
+
+.App .hide {
+  display: none;
+}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

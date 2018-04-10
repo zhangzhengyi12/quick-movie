@@ -1,0 +1,16 @@
+.previews {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #344752;
+  padding-top: 20px;
+}
+
+.previews .preview-wrapper {
+  display: flex;
+  width: 120px;
+  height: 260px;
+  margin: 0 10px;
+}
