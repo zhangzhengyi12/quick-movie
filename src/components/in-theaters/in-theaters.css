@@ -4,7 +4,6 @@
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  background-color: #344752;
   padding-top: 20px;
 }
 
@@ -12,5 +11,5 @@
   display: flex;
   width: 120px;
   height: 260px;
-  margin: 0 10px;
+  margin: 0 9px;
 }

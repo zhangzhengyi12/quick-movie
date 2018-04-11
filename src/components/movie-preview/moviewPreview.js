@@ -6,10 +6,9 @@ class MoviewPreview extends Component {
     let {movieCover,name,type,rating} = this.props.data
     let normalzedType = type.join('/')
     return <div className="moview-preview">
-    <div className="cover" style={{backgroundImage:`url(${movieCover})`}}></div>
+    <div className="cover" style={{backgroundImage:`url(${movieCover})`}}><div className="rating">{rating}</div></div>
     <h3 className="name">{name}</h3>
     <h4 className="type">{normalzedType}</h4>
-    <div className="rating">{rating}</div>
     </div>
   }
 }

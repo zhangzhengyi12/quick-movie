@@ -46,7 +46,7 @@
   line-height: 32px;
   border-radius: 50%;
   position: absolute;
-  bottom: 110px;
+  top: 120px;
   right: -8px;
   box-shadow: 1px 1px 12px #000
 }

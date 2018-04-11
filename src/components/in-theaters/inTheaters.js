@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { getDoubanInTheatersData } from '../../api/in-theaters'
 import MoviewPreview from '../movie-preview/moviewPreview'
+import { Scrollbars } from 'react-custom-scrollbars';
 import './in-theaters.css'
 
 class InTheaters extends Component {
@@ -26,7 +27,9 @@ class InTheaters extends Component {
       ))
     }
     return <div className="in-theaters">
-    <div className="previews">{moviewPreviews}</div>
+     <Scrollbars style={{ width: 420, height: 560, background:'#344752' }}>
+     <div className="previews">{moviewPreviews}</div>
+      </Scrollbars>
     </div>
   }
   componentWillMount() {
