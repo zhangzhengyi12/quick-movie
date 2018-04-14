@@ -1,0 +1,26 @@
+.avatar-show {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  height: 100%;
+  align-items: flex-start;
+}
+
+.avatar-show .avatar{
+  width: 100%;
+  display: inline-block;
+  overflow: hidden;
+  height: 60%;
+  box-shadow: 1px 1px 6px #111;
+}
+
+.avatar-show .name {
+  height: 40%;
+  color: #ccc;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.avatar-show .avatar img {
+  width: 100%;
+}

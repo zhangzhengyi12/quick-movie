@@ -5,6 +5,12 @@ function getDoubanInTheatersData(){
   return request(target)
 }
 
+function getMoviewDeatilData(id){
+  const target = "movie/subject/" + id
+  return request(target)
+}
+
 export {
-  getDoubanInTheatersData
+  getDoubanInTheatersData,
+  getMoviewDeatilData
 }
