@@ -4,7 +4,7 @@
   background-position: center;
   background-size: cover;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0,0,0,.5);
+  box-shadow: 0 0 10px rgba(0,0,0,.4);
   transition: all .3s;
   cursor: pointer;
 }
@@ -15,7 +15,8 @@
 }
 
 .cover:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
+  transform: translateY(-2px);
   box-shadow: 0 0 12px rgba(0,0,0,1);
 }
 

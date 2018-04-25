@@ -4,6 +4,7 @@ import MoviewPreview from '../movie-preview/moviewPreview'
 import ScrollView from '../scroll-view/scroll-view'
 import LoadingBig from '../../base/loading-big/loading-big'
 import InTheaterBigView from '../in-theater-big-view/in-theather-big-view'
+import { CSSTransition } from 'react-transition-group'
 import './in-theaters.css'
 
 class InTheaters extends Component {
@@ -21,7 +22,8 @@ class InTheaters extends Component {
     if (inTheaters.subjects && inTheaters.subjects.length !== 0) {
       moviewPreviews = inTheaters.subjects.map((item, i) => (
         <div className="preview-wrapper" key={i}>
-          <MoviewPreview className="test"
+          <MoviewPreview
+            className="test"
             data={{
               movieCover: item.images.large,
               name: item.title,
@@ -41,7 +43,14 @@ class InTheaters extends Component {
           {this.state.inTheaters.length <= 0 ? <LoadingBig /> : null}
           <div className="previews">{moviewPreviews}</div>
         </ScrollView>
-        {this.state.disInthearBigView ? <InTheaterBigView data={this.state.currentIntheaterBigViewData} onClose={()=>{this.closeBigView()}} /> : null}
+        <CSSTransition in={this.state.disInthearBigView} timeout={300} classNames="big-view" unmountOnExit>
+          <InTheaterBigView
+            data={this.state.currentIntheaterBigViewData}
+            onClose={() => {
+              this.closeBigView()
+            }}
+          />
+        </CSSTransition>
       </div>
     )
   }
@@ -63,9 +72,9 @@ class InTheaters extends Component {
       currentIntheaterBigViewData
     })
   }
-  closeBigView(){
+  closeBigView() {
     this.setState({
-      disInthearBigView:false
+      disInthearBigView: false
     })
   }
 }

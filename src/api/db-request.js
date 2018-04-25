@@ -1,10 +1,10 @@
 import superagent from 'superagent'
 
-const DOUBAN_API_URI = 'https://api.yinode.tech/douban/'
+const BASE_URL = 'https://api.yinode.tech/'
 
 function request(target) {
   return new Promise((resolve, rejcet) => {
-    const COM_URI = DOUBAN_API_URI + target
+    const COM_URI = BASE_URL + target
     superagent.get(COM_URI).end((err, res) => {
       if(err){
         rejcet(err)

@@ -1,4 +1,4 @@
-.in-theater-big-view {
+.new-resource-big-view {
   position: absolute;
   top: 40px;
   bottom: -40px;
@@ -47,7 +47,7 @@
 }
 
 .detail .title {
-  font-size: 17px;
+  font-size: 16px;
   color: #eee;
   padding: 0;
   text-align: left;
@@ -55,37 +55,37 @@
   margin-top: 0px;
 }
 
-.detail .o-title {
-  font-size: 14px;
-  color: #aaa;
-  padding: 0;
-  text-align: left;
-  margin: 0 0 8px 0;
-}
-
 .detail .rating-group {
   display: flex;
   align-items: center;
+  margin-bottom: 2px;
+}
+.detail .rating-group .rat {
+  margin: 0;
+  font-size: 16px;
+}
+.detail .rating-group .imdb {
+  margin-left: 10px;
+}
+.detail .rating-group .key {
+  color: #aaa;
+  font-size: 14px;
 }
 
-.rating-group .rat {
-  font-size: 20px;
-  margin-right: 20px;
+.detail .rating-group .val {
+  color: #fff;
+  background-color: #ccc;
+  padding: 0px 4px;
+  font-size: 14px;
+  border-radius: 5px;
 }
 
-.rating-group .star {
-  display: flex;
-  align-items: flex-start;
-}
-
-.rating-group .star img {
-  width: 16px;
-  height: 16px;
-}
-
-.rating-group .rat {
-  color: #d67c05;
-  margin-left: 10px !important;
+.detail .o-title {
+  font-size: 12px;
+  color: #aaa;
+  padding: 0;
+  text-align: left;
+  margin: 0 0 6px 0;
 }
 
 .detail .types {
@@ -135,7 +135,7 @@
 }
 
 .detail .go-detail a {
-  padding: 4px 26px;
+  padding: 4px 24px;
   font-size: 16px;
   background-color: #17a7e6;
   color: #fff;
@@ -160,6 +160,9 @@
   cursor: pointer;
 }
 
+.movie-desc {
+  max-height: 300px;
+}
 .movie-desc .title {
   color: #ccc;
   font-size: 14px;
@@ -175,5 +178,12 @@
   font-size: 12px;
   color: #aaa;
   margin-top: 0;
+  text-align: left;
+}
+
+.download .title {
+  color: #ccc;
+  font-size: 14px;
+  margin: 10px 0;
   text-align: left;
 }

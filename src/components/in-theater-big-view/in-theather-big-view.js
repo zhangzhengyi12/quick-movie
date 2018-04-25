@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import './in-theather-big-view.css'
 import Avatar from '../../base/avatar-show/avatar-show.js'
-import {getMoviewDeatilData} from '../../api/in-theaters'
+import { getMoviewDeatilData } from '../../api/in-theaters'
 
-const MAX_DESC_LENGTH = 170
+const MAX_DESC_LENGTH = 160
 const MAX_DESC_TIME_OUT = 6000
 
 class InTheaterBigView extends Component {
@@ -14,30 +14,30 @@ class InTheaterBigView extends Component {
     }
     this.getDescTime = ''
   }
-  componentWillMount(){
+  componentWillMount() {
     this.getMoviewDeatil()
   }
-  getMoviewDeatil(){
+  getMoviewDeatil() {
     let id = this.props.data.id
-    this.getDescTime = setTimeout(()=>{
+    this.getDescTime = setTimeout(() => {
       // 如果依旧获取不到，默认为错误
-      if(!this.state.desc){
+      if (!this.state.desc) {
         this.setState({
-          desc:'抱歉，获取简介失败了，请稍后再试！'
+          desc: '抱歉，获取简介失败了，请稍后再试！'
         })
       }
-    },MAX_DESC_TIME_OUT)
-    getMoviewDeatilData(id).then((res=>{
+    }, MAX_DESC_TIME_OUT)
+    getMoviewDeatilData(id).then(res => {
       let desc = ''
-      if(res.summary.length > MAX_DESC_LENGTH){
-        desc = res.summary.slice(0,MAX_DESC_LENGTH) + '...'
-      }else{
+      if (res.summary.length > MAX_DESC_LENGTH) {
+        desc = res.summary.slice(0, MAX_DESC_LENGTH) + '...'
+      } else {
         desc = res.summary
       }
       this.setState({
         desc
       })
-    }))
+    })
   }
   render() {
     let data = this.props.data
@@ -70,7 +70,13 @@ class InTheaterBigView extends Component {
     let casts = data.casts.map((item, i) => {
       let src = item.avatars.large
       return (
-        <div key={item.name} className="avatar-wrapper">
+        <div
+          key={item.name}
+          className="avatar-wrapper"
+          onClick={() => {
+            window.open(item.alt)
+          }}
+        >
           <Avatar avatarSrc={src} name={item.name} />
         </div>
       )
@@ -99,7 +105,9 @@ class InTheaterBigView extends Component {
               </div>
               <div className="types">{typeGroup}</div>
               <div className="go-detail">
-                <a href={data.alt} target="__blank">More</a>
+                <a href={data.alt} target="__blank">
+                  More
+                </a>
               </div>
             </div>
           </div>

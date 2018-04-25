@@ -1,12 +1,12 @@
 import request from './db-request'
 
 function getDoubanInTheatersData(){
-  const target = "movie/in_theaters"
+  const target = "douban/movie/in_theaters"
   return request(target)
 }
 
 function getMoviewDeatilData(id){
-  const target = "movie/subject/" + id
+  const target = "douban/movie/subject/" + id
   return request(target)
 }
 
