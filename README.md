@@ -1,3 +1,8 @@
+# 已经过时
+
+该扩展的工作流已经过时，最新的可以参考如下文章，能够做到部分及时编译刷新
+https://medium.com/better-programming/create-a-chrome-extension-using-react-and-typescript-50e94e14320c
+
 豆瓣的API已经变成强奸式了，正在上映和即将上映部分凉凉
 
 TODO:
