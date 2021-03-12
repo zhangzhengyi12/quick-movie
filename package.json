@@ -35,7 +35,7 @@
     "raf": "3.4.0",
     "react": "^16.3.1",
     "react-custom-scrollbars": "^4.2.1",
-    "react-dev-utils": "^5.0.1",
+    "react-dev-utils": "^11.0.4",
     "react-dom": "^16.3.1",
     "react-notice-message": "^1.1.1",
     "react-select": "^1.2.1",
